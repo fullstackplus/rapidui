@@ -1,0 +1,127 @@
+/*
+THE RAPIDUI GRID FRAMEWORK
+http://jamesabbottdd.com/rapidui
+RAPIDUI IS LICENCED UNDER THE MIT LICENSE.
+*/
+
+/* body, baseline font size, links
+--------------------------------------------- */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+}
+
+a {text-decoration: none;}
+
+/* grid
+--------------------------------------------- */
+.rowContainer>*[class$="Col"] {
+    /*
+    for visual testing, uncomment:    */
+    height: 100px;
+    background: #fcc;
+
+    float: left;
+    margin: 0 10px 13px 10px; /*use this for fixed layouts*/
+    margin-left: .9259259259259258%;
+    margin-right: .9259259259259258%;
+    margin-bottom: 13px;
+}
+
+/*FIXED WIDTHS:*/
+.oneCol {width: 70px;}
+/*70*2+20*/
+.twoCol {width: 160px;}
+/*70*3+20*2*/
+.threeCol {width: 250px;}
+/*70*4+20*3*/
+.fourCol {width: 340px;}
+/*70*5+20*4*/
+.fiveCol {width: 430px;}
+/*70*6+20*5*/
+.sixCol {width: 520px;}
+/*70*7+20*6*/
+.sevenCol {width: 610px;}
+/*70*8+20*7*/
+.eightCol {width: 700px;}
+/*70*9+20*8*/
+.nineCol {width: 790px;}
+/*70*10+20*9*/
+.tenCol {width: 880px;}
+/*70*11+20*10*/
+.elevenCol {width: 970px;}
+/*70*12+20*11*/
+.twelveCol {width: 1060px;}
+/*1080*.382-20*/
+.narrowCol {width: 392.56px;}
+/*1080*.618-20*/
+.wideCol {width: 647.44px;}
+/*END OF FIXED WIDTHS*/
+
+/*70px*/
+.oneCol {width: 6.48148148%;}
+/*160px*/
+.twoCol {width: 14.8148148%;}
+/*250px*/
+.threeCol {width: 23.1481481%;}
+/*340px*/
+.fourCol {width: 31.4814815%;}
+/*430px*/
+.fiveCol {width: 39.8148148%;}
+/*520px*/
+.sixCol {width: 48.1481481%;}
+/*610px*/
+.sevenCol {width: 56.4814815%;}
+/*700px*/
+.eightCol {width: 64.8148148%;}
+/*790px*/
+.nineCol {width: 73.1481481%;}
+/*880px*/
+.tenCol {width: 81.4814815%;}
+/*970px*/
+.elevenCol {width: 89.8148148%;}
+/*1060px*/
+.twelveCol {width: 98.1481481%;}
+/*392.56px*/
+.narrowCol {width: 36.3481481%;}
+/*647.44px*/
+.wideCol {width: 59.9481481%;}
+
+
+/* groups with self-clearing floats
+--------------------------------------------- */
+.group:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/* non-textual elements in the fluid grid:
+--------------------------------------------- */
+img, video, object {max-width: 100%;}
+
+/* page structure
+--------------------------------------------- */
+.wrapper {
+    width: 80%;
+    max-width: 1080px;
+    min-width: 700px;
+    margin: 0 auto;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+footer {
+    clear: both;
+    margin: 0 auto;
+    padding: 10px 0 30px 0;
+    font-size: 1.3em;
+    font-family: Georgia;
+    color: #fff;
+    border-top: 2px solid #e2e1d4;
+    background: #333;
+    background: rgba(0,0,0, .6);
+    text-align: center;
+} 
