@@ -6,7 +6,7 @@ rapidui is a collection of tools for rapid prototyping and designing directly in
           o css_manager.rb
           o more to follow
 
-##The Grid
+The Grid
 
 A small HTML&CSS framework designed around the following principles:
 
