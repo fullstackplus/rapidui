@@ -1,5 +1,5 @@
 rapidui is a collection of tools for rapid prototyping and designing directly in the browser. It consists of a HTML&CSS framework for managing layouts and a number of utility JavaScript and Ruby scripts.      
-The Grid     
+#The Grid     
 Scripts           
 typography.rb           
 css_manager.rb           
