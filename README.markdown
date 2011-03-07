@@ -5,7 +5,7 @@
 It consists of a HTML&CSS framework for managing layouts and a number of utility JavaScript and Ruby scripts.      
 
 <ul>
-    <li><a href="#grid"The Grid</li>
+    <li><a href="#grid">The Grid</a></li>
     <li>Scripts
         <ul>
             <li>typography.rb</li>
