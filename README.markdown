@@ -36,4 +36,4 @@ wide block is 70*5+20*4=430px. This is because a block of n units has the width 
 column (70px) repeated n times, plus the widths of the spaces in between the columns. When 2
 columns are adjacent to each other, the space between them is 20px, as each column contributes
 with 10px on each side. A five-column cell has five 70px units with 4 adjacent spaces in between
-the units; therefore, 70*5+20*4=430px.
+the units; therefore, 70\*5+20\*4=430px.
