@@ -5,7 +5,7 @@
 It consists of a HTML&CSS framework for managing layouts and a number of utility JavaScript and Ruby scripts.      
 
 <ul>
-    <li><a name="#grid">The Grid</a></li>
+    <li><a href="#grid">The Grid</a></li>
     <li>Scripts
         <ul>
             <li>typography.rb</li>
@@ -15,7 +15,7 @@ It consists of a HTML&CSS framework for managing layouts and a number of utility
     </li>
 </ul>
 
-<h2 id="grid">The Grid</h2>
+<h2><a name="grid">The Grid</a></h2>
 A small HTML&CSS framework designed around the following principles:
 
 1. Both fixed and flexible layouts must be possible
