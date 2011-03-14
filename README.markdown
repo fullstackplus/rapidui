@@ -67,20 +67,90 @@ The grid relies on the following classes:
 
 ###The main hack
 
-The grid system uses a CSS3 substring matching attribute selector to achieve grouping of cells:
+The grid system uses a [CSS3 substring matching attribute selector ](http://www.w3.org/TR/css3-selectors/
+"CSS3 selector spec") to achieve grouping of cells:
+
 <pre>.rowContainer>*[class$="Col"]</pre>
+
 This means that any element with the class attribute ending with "Col" will be treated as a cell
 in the grid. The actual dimensions of the cell element is declared for each individual element,
-ie a class tagged with RC only takes care of the floating and margins.
+ie a class tagged with <pre>.rowContainer</pre> only takes care of the floating and margins.
 
-Together, an element tagged with RC and a number of *Col elements constitute what is known in Object-Oriented
-CSS terminology an "object":
+Together, an element tagged with <pre>.rowContainer</pre> containing a number of <pre>*Col</pre>
+elements constitute what is known in Object-Oriented CSS terminology as an "object":
 
 <pre>
     <div class="rowContainer">
-        <div class=sixCol></div>
-        <div class=sixCol></div>
+        <div class="sixCol"></div>
+        <div class="sixCol"></div>
     </div>
 </pre>
 
-An object is an element with a parent element
+Here, a "row" div contains two six-column cells to achieve a 2-column layout.
+
+An "object" is a reusable HTML module that consists of a parent element with dependent child elements; the
+relationship between the parent and the child elements is declared in CSS to achieve context-independence
+and reuse. In DOM terminology, an "OOCSS object" it is a subtree of a web page's DOM tree that is not dependent
+on its context and therefore demonstrates consistent behavior independent of where it is in the DOM tree.
+
+See [What is meant by an “object” in OOCSS?](https://github.com/stubbornella/oocss/wiki/FAQ "Explanation of the OOCSS "object" concept")
+for an example.
+
+Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag any cell with the <pre>.rowContainer</pre> class:
+
+<pre>
+    <div class="rowContainer">
+        <div class="sixCol"></div>
+        <div class="rowContainer sixCol">
+            <div class="fourCol"></div>
+            <div class="fourCol"></div>
+            <div class="fourCol"></div>
+        </div>
+    </div>
+</pre>
+
+Here, the second 6-column cell is itself a container of three four-column cells. We can continue the subdivision forever:
+
+<pre>
+    <div class="rowContainer">
+        <div class="sixCol"></div>
+        <div class="rowContainer sixCol">
+            <div class="fourCol"></div>
+            <div class="rowContainer fourCol">
+                <div class="sixCol"></div>
+                <div class="sixCol"></div>
+            </div>
+            <div class="fourCol"></div>
+        </div>
+    </div>
+</pre>
+
+This eliminates the need for declaring a separate "row" or "line" div for each level of nesting,
+[as is done](https://github.com/stubbornella/oocss/wiki/Lines-&-Grids "Nesting grids in OOCSS")
+in the original OOCSS framework.
+
+**NOTE:** The CSS3 selector specification reads:
+
+> E[foo$="bar"] an E element whose "foo" attribute value ends exactly with the string "bar".
+
+If an element has more than one class, then for this selector to work the above attribute must be
+the last in the list of attributes. For example, here the rule will be applied:
+
+<pre>
+    <div class="rowContainer">
+        <div class="foo twelveCol"></div>
+    </div>
+</pre>
+
+Whereas here, it will not:
+
+<pre>
+    <div class="rowContainer">
+        <div class="twelveCol foo"></div>
+    </div>
+</pre>
+
+To be continued.
+
+
+
