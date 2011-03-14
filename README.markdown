@@ -44,23 +44,23 @@ The grid relies on the following classes:
 
 <ol>
     <li>
-        <pre>.rowContainer</pre>
+        <code>.rowContainer</code>
         Achieves horizontal breaks and vertical rhythm between layout elements;
         groups together cells in the grid. This is the "row" element.
     </li>
     <li>
-        <pre>.[1-12]Col</pre>
+        <code>.[1-12]Col</code>
         The 12 column elements corresponding to the 12-column division, with the addition of
         <code>.wideCol</code> and <code>.narrowCol</code>, corresponding to the wide and narrow
         divisions of the Golden Section, respectively.
     </li>
     <li>
-        <pre>.group</pre>
+        <code>.group</code>
         For containing floats. I'm using Tony Aslett's clearfix method here; see
         [How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html "Article on the clearfix method")
     </li>
     <li>
-        <pre>.wrapper</pre>
+        <code>.wrapper</code>
         For centering layout elements. This element is what is commonly referred to as the "container". In rapidui,
     </li>
 </ol>
@@ -70,21 +70,21 @@ The grid relies on the following classes:
 The grid system uses a [CSS3 substring matching attribute selector](http://www.w3.org/TR/css3-selectors/
 "CSS3 selector spec") to achieve grouping of cells:
 
-<pre>.rowContainer>*[class$="Col"]</pre>
+<code>.rowContainer>*[class$="Col"]</code>
 
 This means that any element with the class attribute ending with "Col" will be treated as a cell
 in the grid. The actual dimensions of the cell element is declared for each individual element,
-ie a class tagged with <pre>.rowContainer</pre> only takes care of the floating and margins.
+ie a class tagged with <code>.rowContainer</code> only takes care of the floating and margins.
 
-Together, an element tagged with <pre>.rowContainer</pre> containing a number of <pre>*Col</pre>
+Together, an element tagged with <code>.rowContainer</code> containing a number of <code>*Col</code>
 elements constitute what is known in Object-Oriented CSS terminology as an "object":
 
-<pre>
+<code>
     <div class="rowContainer">
         <div class="sixCol"></div>
         <div class="sixCol"></div>
     </div>
-</pre>
+</code>
 
 Here, a "row" div contains two six-column cells to achieve a 2-column layout.
 
@@ -111,7 +111,7 @@ Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag
 
 Here, the second 6-column cell is itself a container of three four-column cells. We can continue the subdivision forever:
 
-<pre>
+<code>
     <div class="rowContainer">
         <div class="sixCol"></div>
         <div class="rowContainer sixCol">
@@ -123,7 +123,7 @@ Here, the second 6-column cell is itself a container of three four-column cells.
             <div class="fourCol"></div>
         </div>
     </div>
-</pre>
+</code>
 
 This eliminates the need for declaring a separate "row" or "line" div for each level of nesting,
 [as is done](https://github.com/stubbornella/oocss/wiki/Lines-&-Grids "Nesting grids in OOCSS")
@@ -136,21 +136,21 @@ in the original OOCSS framework.
 If an element has more than one class, then for this selector to work the above attribute must be
 the last in the list of attributes. For example, here the rule will be applied:
 
-<pre>
+<code>
     <div class="rowContainer">
         <div class="foo twelveCol"></div>
     </div>
-</pre>
+</code>
 
 Whereas here, it will not:
 
-<pre>
+<code>
     <code>
         <div class="rowContainer">
             <div class="twelveCol foo"></div>
         </div>
     </code>
-</pre>
+</code>
 
 To be continued.
 
