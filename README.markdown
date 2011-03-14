@@ -44,23 +44,24 @@ The grid relies on the following classes:
 
 <ol>
     <li>
-        <code>.rowContainer</code>
+        <code>.rowContainer</code>:
         Achieves horizontal breaks and vertical rhythm between layout elements;
         groups together cells in the grid. This is the "row" element.
     </li>
     <li>
-        <code>.[1-12]Col</code>
+        <code>.[1-12]Col</code>:
         The 12 column elements corresponding to the 12-column division, with the addition of
         <code>.wideCol</code> and <code>.narrowCol</code>, corresponding to the wide and narrow
         divisions of the Golden Section, respectively.
     </li>
     <li>
-        <code>.group</code>
+        <code>.group</code>:
         For containing floats. I'm using Tony Aslett's clearfix method here; see
-        [How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html "Article on the clearfix method")
+        [How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html
+        "Article on the clearfix method")
     </li>
     <li>
-        <code>.wrapper</code>
+        <code>.wrapper</code>:
         For centering layout elements. This element is what is commonly referred to as the "container". In rapidui,
     </li>
 </ol>
