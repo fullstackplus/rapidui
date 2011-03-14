@@ -94,8 +94,8 @@ relationship between the parent and the child elements is declared in CSS to ach
 and reuse. In DOM terminology, an "OOCSS object" it is a subtree of a web page's DOM tree that is not dependent
 on its context and therefore demonstrates consistent behavior independent of where it is in the DOM tree.
 
-See [What is meant by an “object” in OOCSS?](https://github.com/stubbornella/oocss/wiki/FAQ "Explanation of the OOCSS "object" concept")
-for an example.
+See [What is meant by an \"object\" in OOCSS?](https://github.com/stubbornella/oocss/wiki/FAQ
+"Explanation of the OOCSS "object" concept") for an example.
 
 Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag any cell with the <pre>.rowContainer</pre> class:
 
