@@ -56,8 +56,7 @@ The grid relies on the following classes:
     </li>
     <li>
         <code>.group</code>:
-        For containing floats. I'm using Tony Aslett's clearfix method here; see
-        [How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html)
+        For containing floats. I'm using Tony Aslett's clearfix method here; see http://www.positioniseverything.net/easyclearing.html
     </li>
     <li>
         <code>.wrapper</code>:
