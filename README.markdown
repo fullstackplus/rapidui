@@ -51,7 +51,7 @@ The grid relies on the following classes:
     <li>
         <pre>.[1-12]Col</pre>
         The 12 column elements corresponding to the 12-column division, with the addition of
-        <code>.wideCol</code> and <pre>.narrowCol</pre>, corresponding to the wide and narrow
+        <code>.wideCol</code> and <code>.narrowCol</code>, corresponding to the wide and narrow
         divisions of the Golden Section, respectively.
     </li>
     <li>
@@ -96,9 +96,9 @@ on its context and therefore demonstrates consistent behavior independent of whe
 See [What is meant by an "object" in OOCSS?](https://github.com/stubbornella/oocss/wiki/FAQ
 "Explanation of the OOCSS "object" concept") for an example.
 
-Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag any cell with the <pre>.rowContainer</pre> class:
+Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag any cell with the <code>.rowContainer</code> class:
 
-<pre>
+<code>
     <div class="rowContainer">
         <div class="sixCol"></div>
         <div class="rowContainer sixCol">
@@ -107,7 +107,7 @@ Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag
             <div class="fourCol"></div>
         </div>
     </div>
-</pre>
+</code>
 
 Here, the second 6-column cell is itself a container of three four-column cells. We can continue the subdivision forever:
 
