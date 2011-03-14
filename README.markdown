@@ -57,7 +57,8 @@ The grid relies on the following classes:
     <li>
         <pre>.group</pre>
         For containing floats. I'm using Tony Aslett's clearfix method here; see
-[How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html "Article on the clearfix method")
+        [How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html
+        "Article on the clearfix method")
     </li>
     <li>
         <pre>.wrapper</pre>
@@ -67,7 +68,7 @@ The grid relies on the following classes:
 
 ###The main hack
 
-The grid system uses a [CSS3 substring matching attribute selector ](http://www.w3.org/TR/css3-selectors/
+The grid system uses a [CSS3 substring matching attribute selector](http://www.w3.org/TR/css3-selectors/
 "CSS3 selector spec") to achieve grouping of cells:
 
 <pre>.rowContainer>*[class$="Col"]</pre>
@@ -145,9 +146,11 @@ the last in the list of attributes. For example, here the rule will be applied:
 Whereas here, it will not:
 
 <pre>
-    <div class="rowContainer">
-        <div class="twelveCol foo"></div>
-    </div>
+    <code>
+        <div class="rowContainer">
+            <div class="twelveCol foo"></div>
+        </div>
+    </code>
 </pre>
 
 To be continued.
