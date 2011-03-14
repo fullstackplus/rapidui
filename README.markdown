@@ -51,7 +51,7 @@ The grid relies on the following classes:
     <li>
         <pre>.[1-12]Col</pre>
         The 12 column elements corresponding to the 12-column division, with the addition of
-        <pre>.wideCol</pre> and <pre>.narrowCol</pre>, corresponding to the wide and narrow
+        <code>.wideCol</code> and <pre>.narrowCol</pre>, corresponding to the wide and narrow
         divisions of the Golden Section, respectively.
     </li>
     <li>
