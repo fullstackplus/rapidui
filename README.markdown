@@ -39,6 +39,7 @@ with 10px on each side. A five-column cell has five 70px units with 4 adjacent s
 the units; therefore, 70\*5+20\*4=430px.
 
 ###Classes
+
 The grid relies on the following classes:
 
 <ol>
@@ -54,10 +55,17 @@ The grid relies on the following classes:
         divisions of the Golden Section, respectively.
     </li>
     <li>
-        <pre>.[1-12]Col</pre>
-        The 12 column elements corresponding to the 12-column division, with the addition of
-        <pre>.wideCol</pre> and <pre>.narrowCol</pre>, corresponding to the wide and narrow
-        divisions of the Golden Section, respectively.
+        <pre>.group</pre>
+        For managing floats
     </li>
-
+    <li>
+        <pre>.wrapper</pre>
+        For centering layout elements.
+    </li>
 </ol>
+
+###The main hack
+
+The grid system uses a CSS3 substring matching attribute selector to achieve grouping of cells:
+<pre>.rowContainer>*[class$="Col"]</pre>
+
