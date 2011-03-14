@@ -145,11 +145,9 @@ the last in the list of attributes. For example, here the rule will be applied:
 Whereas here, it will not:
 
 <code>
-    <code>
-        <div class="rowContainer">
-            <div class="twelveCol foo"></div>
-        </div>
-    </code>
+    <div class="rowContainer">
+        <div class="twelveCol foo"></div>
+    </div>
 </code>
 
 To be continued.
