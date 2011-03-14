@@ -37,3 +37,27 @@ column (70px) repeated n times, plus the widths of the spaces in between the col
 columns are adjacent to each other, the space between them is 20px, as each column contributes
 with 10px on each side. A five-column cell has five 70px units with 4 adjacent spaces in between
 the units; therefore, 70\*5+20\*4=430px.
+
+###Classes
+The grid relies on the following classes:
+
+<ol>
+    <li>
+        <pre>.rowContainer</pre>
+        Achieves horizontal breaks and vertical rhythm between layout elements;
+        groups together cells in the grid. This is the "row" element.
+    </li>
+    <li>
+        <pre>.[1-12]Col</pre>
+        The 12 column elements corresponding to the 12-column division, with the addition of
+        <pre>.wideCol</pre> and <pre>.narrowCol</pre>, corresponding to the wide and narrow
+        divisions of the Golden Section, respectively.
+    </li>
+    <li>
+        <pre>.[1-12]Col</pre>
+        The 12 column elements corresponding to the 12-column division, with the addition of
+        <pre>.wideCol</pre> and <pre>.narrowCol</pre>, corresponding to the wide and narrow
+        divisions of the Golden Section, respectively.
+    </li>
+
+</ol>
