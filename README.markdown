@@ -57,8 +57,7 @@ The grid relies on the following classes:
     <li>
         <pre>.group</pre>
         For containing floats. I'm using Tony Aslett's clearfix method here; see
-        [How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html
-        "Article on the clearfix method")
+        [How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html "Article on the clearfix method")
     </li>
     <li>
         <pre>.wrapper</pre>
