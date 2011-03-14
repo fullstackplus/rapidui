@@ -56,11 +56,12 @@ The grid relies on the following classes:
     </li>
     <li>
         <pre>.group</pre>
-        For managing floats
+        For containing floats. I'm using Tony Aslett's clearfix method here; see
+[How To Clear Floats Without Structural Markup](http://www.positioniseverything.net/easyclearing.html "Article on the clearfix method")
     </li>
     <li>
         <pre>.wrapper</pre>
-        For centering layout elements.
+        For centering layout elements. This element is what is commonly referred to as the "container". In rapidui,
     </li>
 </ol>
 
@@ -68,4 +69,18 @@ The grid relies on the following classes:
 
 The grid system uses a CSS3 substring matching attribute selector to achieve grouping of cells:
 <pre>.rowContainer>*[class$="Col"]</pre>
+This means that any element with the class attribute ending with "Col" will be treated as a cell
+in the grid. The actual dimensions of the cell element is declared for each individual element,
+ie a class tagged with RC only takes care of the floating and margins.
 
+Together, an element tagged with RC and a number of *Col elements constitute what is known in Object-Oriented
+CSS terminology an "object":
+
+<pre>
+    <div class="rowContainer">
+        <div class=sixCol></div>
+        <div class=sixCol></div>
+    </div>
+</pre>
+
+An object is an element with a parent element
