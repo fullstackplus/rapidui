@@ -4,7 +4,8 @@
 
 It consists of a HTML5&CSS3 framework for managing layouts and a number of utility JavaScript and Ruby scripts.
 
-###<a href="#grid">The Grid</a>
+###<a href="#grid">Grid System:</a>
+ a 1080px fluid grid system with
 ###Scripts
 
 * <a href="https://github.com/abbottjam/rapidui/tree/master/css/css_manager">CSS Manager:</a>
@@ -13,11 +14,12 @@ It consists of a HTML5&CSS3 framework for managing layouts and a number of utili
 <h2><a name="grid">The Grid</a></h2>
 A small HTML&CSS framework designed around the following principles:
 
-1. Both fixed and flexible layouts must be possible
-2. Flexible layouts must utilize responsive web design
-3. Flexible layouts must be infinitely nestable
-4. There must be extreme separation of concern between CSS declarations
-5. Layouts of any complexity should be achieved using the least amount of markup and CSS possible.
+1. Both fixed and flexible layouts must be possible;
+2. Flexible layouts must be built on a fluid grid (more on <a href="http://www.alistapart.com/articles/fluidgrids/"> fluid grids</a>);
+3. Flexible layouts must be infinitely nestable (more on <a href="http://www.flickr.com/photos/nicole_hugo/3291776052/">
+nestable grids and the Arnaud Gueras test</a>);
+4. Maximum separation of concern between CSS attributes, especially classes;
+5. Minimal markup and CSS for layouts of any complexity.
 
 ###Grid dimensions
 The grid is built on a screen width of 1080 pixels divided by 12 columns;
