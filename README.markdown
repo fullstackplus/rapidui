@@ -78,14 +78,10 @@ ie a class tagged with <code>.rowContainer</code> only takes care of the floatin
 Together, an element tagged with <code>.rowContainer</code> containing a number of <code>*Col</code>
 elements constitute what is known in Object-Oriented CSS terminology as an "object":
 
-<pre>
-    <code>
         <div class="rowContainer">
             <div class="sixCol"></div>
             <div class="sixCol"></div>
         </div>
-    </code>
-</pre>
 
 Here, a "row" div contains two six-column cells to achieve a 2-column layout.
 
