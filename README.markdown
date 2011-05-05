@@ -7,7 +7,8 @@ It consists of a HTML5&CSS3 framework for managing layouts and a number of utili
 ###<a href="#grid">The Grid</a>
 ###Scripts
 
-* css_manager.rb
+* <a href="https://github.com/abbottjam/rapidui/tree/master/css/css_manager">CSS Manager: a script for combining,
+de-commenting, and compressing CSS files for faster, automated deployment</a>
 
 <h2><a name="grid">The Grid</a></h2>
 A small HTML&CSS framework designed around the following principles:
