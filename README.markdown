@@ -1,6 +1,6 @@
 #rapidui
 
-##- a toolkit for rapid prototyping and CSS / HTML development in-the-browser.
+##- a toolkit for effective CSS / HTML development and rapid prototyping in-the-browser.
 
 What it consists of: a HTML5&CSS3 framework for managing layouts and a number of utility scripts.
 
