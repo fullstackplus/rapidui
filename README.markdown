@@ -17,7 +17,8 @@ A small HTML&CSS framework designed around the following principles:
 2. Flexible layouts must be built on a fluid grid (more on <a href="http://www.alistapart.com/articles/fluidgrids/"> fluid grids</a>);
 3. Flexible layouts must be infinitely nestable (more on <a href="http://www.flickr.com/photos/nicole_hugo/3291776052/">
 nestable grids and the Arnaud Gueras test</a>);
-4. Maximum separation of concern between CSS attributes, especially classes;
+4. Maximum separation of concerns between CSS attributes, especially classes (more on
+<a href="http://en.wikipedia.org/wiki/Separation_of_concerns"> separation of concerns</a>);
 5. Minimal markup and CSS for layouts of any complexity.
 
 ###Grid dimensions
