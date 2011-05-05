@@ -78,10 +78,10 @@ ie a class tagged with <code>.rowContainer</code> only takes care of the floatin
 Together, an element tagged with <code>.rowContainer</code> containing a number of <code>*Col</code>
 elements constitute what is known in Object-Oriented CSS terminology as an "object":
     
-        <div class="rowContainer">
-            <div class="sixCol"></div>
-            <div class="sixCol"></div>
-        </div>
+     <div class="rowContainer">
+        <div class="sixCol"></div>
+        <div class="sixCol"></div>
+     </div>
 
 Here, a "row" div contains two six-column cells to achieve a 2-column layout.
 
@@ -95,7 +95,6 @@ See [What is meant by an "object" in OOCSS?](https://github.com/stubbornella/ooc
 
 Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag any cell with the <code>.rowContainer</code> class:
 
-
     <div class="rowContainer">
         <div class="sixCol"></div>
         <div class="rowContainer sixCol">
@@ -105,10 +104,8 @@ Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag
         </div>
     </div>
 
-
 Here, the second 6-column cell is itself a container of three four-column cells. We can continue the subdivision forever:
 
-<code>
     <div class="rowContainer">
         <div class="sixCol"></div>
         <div class="rowContainer sixCol">
@@ -120,7 +117,6 @@ Here, the second 6-column cell is itself a container of three four-column cells.
             <div class="fourCol"></div>
         </div>
     </div>
-</code>
 
 This eliminates the need for declaring a separate "row" or "line" div for each level of nesting,
 [as is done](https://github.com/stubbornella/oocss/wiki/Lines-&-Grids "Nesting grids in OOCSS")
@@ -133,19 +129,15 @@ in the original OOCSS framework.
 If an element has more than one class, then for this selector to work the above attribute must be
 the last in the list of attributes. For example, here the rule will be applied:
 
-<code>
     <div class="rowContainer">
         <div class="foo twelveCol"></div>
     </div>
-</code>
 
 Whereas here, it will not:
 
-<code>
     <div class="rowContainer">
         <div class="twelveCol foo"></div>
     </div>
-</code>
 
 To be continued.
 
