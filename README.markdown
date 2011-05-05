@@ -1,19 +1,13 @@
 #rapidui
 
-&hellip;is a collection of tools for rapid prototyping and designing directly in the browser.
+##- a collection of tools for rapid prototyping and designing directly in the browser.
 
-It consists of a HTML&CSS framework for managing layouts and a number of utility JavaScript and Ruby scripts.      
+It consists of a HTML5&CSS3 framework for managing layouts and a number of utility JavaScript and Ruby scripts.
 
-<ul>
-    <li><a href="#grid">The Grid</a></li>
-    <li>Scripts
-        <ul>
-            <li>typography.rb</li>
-            <li>css_manager.rb</li>
-            <li>more to follow</li>
-        </ul>
-    </li>
-</ul>
+###<a href="#grid">The Grid</a>
+###Scripts
+
+* css_manager.rb
 
 <h2><a name="grid">The Grid</a></h2>
 A small HTML&CSS framework designed around the following principles:
@@ -71,7 +65,7 @@ The grid system uses a [CSS3 substring matching attribute selector](http://www.w
 
 <code>.rowContainer>*[class$="Col"]</code>
 
-This means that any element with the class attribute ending with "Col" will be treated as a cell
+This means that any element with the class attribute value ending with "Col" will be treated as a cell
 in the grid. The actual dimensions of the cell element is declared for each individual element,
 ie a class tagged with <code>.rowContainer</code> only takes care of the floating and margins.
 
@@ -126,8 +120,9 @@ in the original OOCSS framework.
 
 > E[foo$="bar"] an E element whose "foo" attribute value ends exactly with the string "bar".
 
-If an element has more than one class, then for this selector to work the above attribute must be
-the last in the list of attributes. For example, here the rule will be applied:
+Because of this rule, the list of values for the "class" attribute must end with [*Col]. If an element has only one class,
+this is the default. When there are multiple class values the [*Col] value must be the last in the list. For example, here
+the rule will be applied:
 
     <div class="rowContainer">
         <div class="foo twelveCol"></div>
