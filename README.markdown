@@ -1,11 +1,10 @@
 #rapidui
 
-##- a collection of tools for rapid prototyping and designing directly in the browser.
+##- a toolkit for rapid prototyping and CSS / HTML development in-the-browser.
 
-It consists of a HTML5&CSS3 framework for managing layouts and a number of utility JavaScript and Ruby scripts.
+What it consists of: a HTML5&CSS3 framework for managing layouts and a number of utility scripts.
 
-###<a href="#grid">Grid System:</a>
- a 1080px fluid grid system with
+###<a href="#grid">1080px Grid System</a>
 ###Scripts
 
 * <a href="https://github.com/abbottjam/rapidui/tree/master/css/css_manager">CSS Manager:</a>
