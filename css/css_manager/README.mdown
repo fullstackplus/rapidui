@@ -1,0 +1,32 @@
+##CSS Manager
+### - a Ruby toolkit for automated CSS deployment
+
+####What it does:
+
+At the moment, there are 2 main parts to the script:
+
+1. Creating one CSS file out of several ones (declared in the import file). This pass also renames image
+   paths used in development to paths used in deployment.
+2. Removing comments from an input CSS file by creating a new file whose contents are the same of the
+   input file, but with comments filtered away.
+
+These two tasks are not dependent on each other, so you can use both in one run or independently -
+just modify css_manager.rb (bottom of file) to specify what you need.
+
+#####Upcoming functionality:
+Next TODO is compressing the file(s) for lighter footprint on deployment.
+
+####How to use:
+
+Place the directory containing the main script ('css_manager.rb') in the directory with all your
+CSS files. (The '/lib' directory is required, the '/test' directory is optional).
+
+The script assumes that under development, you have an import CSS file that lists your
+actual CSS files, like so:
+
+@import url("reset.css");
+@import url("master.css");
+
+The script references source and target files at the bottom, where you can change the file names
+according to your project. (For instance, in case your import file is named other than 'screen.css').
+

@@ -1,0 +1,27 @@
+/*comment*/
+/*another comment*/
+
+/*concatenated*//*comment*/
+
+@import 'somefile.css';
+
+* {margin: 0; padding: 0;}
+
+body {
+    /*
+    multi-line
+    comment
+    */
+    background: #fff;
+    font-size: 62%; /*inline comment*/
+}
+
+div#container {/*inline comment*/border: 0; /*trailing comment*/}
+
+#foo{}/*closing comment*/
+
+/*also a comment*/#bar{}
+
+/*final comment*/
+
+div#container {/*inline comment*/border: 0;}
