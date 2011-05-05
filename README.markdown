@@ -77,7 +77,7 @@ ie a class tagged with <code>.rowContainer</code> only takes care of the floatin
 
 Together, an element tagged with <code>.rowContainer</code> containing a number of <code>*Col</code>
 elements constitute what is known in Object-Oriented CSS terminology as an "object":
-
+    
         <div class="rowContainer">
             <div class="sixCol"></div>
             <div class="sixCol"></div>
@@ -95,7 +95,7 @@ See [What is meant by an "object" in OOCSS?](https://github.com/stubbornella/ooc
 
 Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag any cell with the <code>.rowContainer</code> class:
 
-<code>
+
     <div class="rowContainer">
         <div class="sixCol"></div>
         <div class="rowContainer sixCol">
@@ -104,7 +104,7 @@ Thanks to this separation of concern, nesting grids is easy in rapidui. Just tag
             <div class="fourCol"></div>
         </div>
     </div>
-</code>
+
 
 Here, the second 6-column cell is itself a container of three four-column cells. We can continue the subdivision forever:
 
