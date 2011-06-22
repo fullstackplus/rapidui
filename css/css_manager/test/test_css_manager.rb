@@ -1,34 +1,8 @@
 require './lib/manager.rb'
-
-class TestableManager < Manager
-  #This class contains duplicated methods for better testing - isolating the setting of state from processing the stack
-  attr_reader :receiver
-  
-  def initialize
-    super
-    @receiver ||= []
-  end
-
-  def set_state(char)
-    add(char)
-    @comment = true if comment_start
-    @comment = false if comment_end
-  end
-
-  def process(char)
-    add(char)
-    @comment = true if comment_start
-    @comment = false if comment_end
-    c = filter
-    @receiver << c unless c.nil?
-    c unless c.nil?
-  end
-end
-
 require 'test/unit'
 require './test/test_helper.rb'
 
-class QuackTest < Test::Unit::TestCase
+class ManagerTest < Test::Unit::TestCase
 
   def setup
     @m = TestableManager.new
