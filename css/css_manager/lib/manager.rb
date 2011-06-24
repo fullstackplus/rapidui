@@ -1,43 +1,28 @@
-module Quack #both a stack and a queue
-  def quack
-    @quack ||= []
-  end
-
-  def add(char)
-    quack.push(char)
-  end
-
-  def top_two
-    return false if quack.length < 2
-    quack.at(-2) + quack.at(-1)
-  end
-
-  def ready
-    quack.length > 2
-  end
-
-  def get_first
-    quack.shift
-  end
-
-  def length
-    quack.length
-  end
-
-  def clear
-    quack.clear
-    nil
-  end
-
-end
-
 class Manager
-  include Quack
   
   attr_reader :comment
 
   def initialize
+    @queue = []
     @comment = false
+  end
+
+  def get_first
+    @queue.shift
+  end
+
+  def process(char)
+    @queue.push(char)
+    set_state
+    c = filter
+    c unless c.nil?
+  end
+
+  private
+  
+  def top_two
+    return false if @queue.length < 2
+    @queue.at(-2) + @queue.at(-1)
   end
 
   def comment_start
@@ -48,17 +33,23 @@ class Manager
     top_two == '*/'
   end
 
-  def process(char)
-    add(char)
+  def ready
+    @queue.length > 2
+  end
+  
+  def clear
+    @queue.clear
+    nil
+  end
+
+  def set_state
     @comment = true if comment_start
     @comment = false if comment_end
-    c = filter
-    c unless c.nil?
   end
 
   def filter
-    return get_first if ready and comment_start #["c", "/", "*"] - pop "c"
-    clear if comment_end #["*", "/"]
-    get_first if ready and !comment #["a", "b", "c"] or ["b", "c", "/"]
+    return get_first if ready and comment_start #queue = ["c", "/", "*"] - pop "c"
+    clear if comment_end #queue = ["/", "*",  "c", "o", "m", "m", "e", "n", "t", "*", "/"]
+    get_first if ready and !comment #queue = ["a", "b", "c"] or ["b", "c", "/"]
   end
 end
