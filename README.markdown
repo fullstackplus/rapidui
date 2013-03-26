@@ -1,4 +1,4 @@
-*UPDATE 26.03.2013:*
+**UPDATE 26.03.2013:**
 
 I am no longer maintaining rapidui, but am using responsive grid systems on a per-project
 basis. The approach I'm currently pursuing is a column-by-column adaptive approach described
