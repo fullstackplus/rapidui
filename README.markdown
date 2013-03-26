@@ -1,3 +1,9 @@
+*UPDATE 26.03.2013:*
+
+I am no longer maintaining rapidui, but am using responsive grid systems on a per-project
+basis. The approach I'm currently pursuing is a column-by-column adaptive approach described
+[in this essay](http://jamesabbottdd.com/design/lessons-learned-in-cross-device-design "Some lessons learned in cross-browser-design").
+
 #rapidui
 
 ##- a toolkit for effective CSS / HTML development and rapid prototyping in-the-browser.
@@ -74,7 +80,7 @@ ie a class tagged with <code>.rowContainer</code> only takes care of the floatin
 
 Together, an element tagged with <code>.rowContainer</code> containing a number of <code>*Col</code>
 elements constitute what is known in Object-Oriented CSS terminology as an "object":
-    
+
      <div class="rowContainer">
         <div class="sixCol"></div>
         <div class="sixCol"></div>
@@ -137,7 +143,6 @@ Whereas here, it will not:
         <div class="twelveCol foo"></div>
     </div>
 
-To be continued.
 
 
 
